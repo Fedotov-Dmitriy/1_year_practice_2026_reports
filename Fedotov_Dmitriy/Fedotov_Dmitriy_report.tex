@@ -84,16 +84,11 @@
 \end{itemize}
 
 Например, для этих групп используются следующие ядра:
-\[
-\begin{aligned}
-\texttt{box\_blur} &= \frac{1}{9}
-\begin{bmatrix}1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1\end{bmatrix},\\
-\texttt{sobel\_x} &=
-\begin{bmatrix}-1 & 0 & 1 \\ -2 & 0 & 2 \\ -1 & 0 & 1\end{bmatrix},\\
-\texttt{sharpen} &=
-\begin{bmatrix}0 & -1 & 0 \\ -1 & 5 & -1 \\ 0 & -1 & 0\end{bmatrix}.
-\end{aligned}
-\]
+\begin{align*}
+\texttt{box\_blur} &= \frac{1}{9} \begin{bmatrix}1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1\end{bmatrix},\\
+\texttt{sobel\_x} &= \begin{bmatrix}-1 & 0 & 1 \\ -2 & 0 & 2 \\ -1 & 0 & 1\end{bmatrix},\\
+\texttt{sharpen} &= \begin{bmatrix}0 & -1 & 0 \\ -1 & 5 & -1 \\ 0 & -1 & 0\end{bmatrix}.
+\end{align*}
 
 Для обработки краёв изображения реализованы три режима. Режим \texttt{reflect} отражает координату относительно края, \texttt{replicate} использует ближайший допустимый пиксель, а \texttt{wrap} циклически переносит индекс на противоположную сторону изображения.
 
@@ -124,7 +119,7 @@
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.82\textwidth]{benchmark_bar.pdf}
+    \includegraphics[width=0.82\textwidth]{benchmark_bar.png}
     \caption{Сравнение времени выполнения собственной реализации, OpenCV и Pillow}
     \label{fig:benchmark-bar}
 \end{figure}
